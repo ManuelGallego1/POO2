@@ -22,7 +22,9 @@ f_surname varchar(100) not null,
 s_surname varchar(100) not null,
 dni int not null unique,
 phone varchar(15) not null,
-primary key(id)
+dni_son int not null unique,
+primary key(id),
+foreign key(dni_son) references student(dni) ON UPDATE CASCADE
 );
 
 create table user(
